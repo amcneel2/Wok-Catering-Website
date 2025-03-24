@@ -1,0 +1,655 @@
+/*Global*/
+:root {
+    --heading1: #2D4263;
+    --heading2: #F0A500;
+    --heading3: #E45826;
+    --nav-text: #F0A500;
+    --body-background: #E6D5B8;
+    --main-background: white;
+    --background-variant: #2D4263;
+    --text-color: white; 
+    --secondary-text: black;
+    --visited: #808080;
+    --primary-color: #F0A500;
+    --accent-color: #E45826;
+    --form-background: white;
+    --form-text: #2D4263;
+    --form-submit: #2D4263;
+    --form-hover: #E6D5B8;
+    --nav-hover:  #2D4263;
+    --nav-border: #F0A500;;
+    --cater-background: white;
+    --product-buttons: #2D4263;
+    --product-background: white;
+    --footer: #2D4263;
+}
+
+*{
+	font-family: Montserrat, Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Header*/
+#skip { /*Accessibility requirement*/
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+    color: var(--secondary-text);
+}
+
+#skip:focus{ /*Keeps skip in same position while focused*/
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+header img { /*logo*/
+    width: 5%;
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+}
+
+h1 a {
+    font-size: 40px;
+    color: var(--heading1);
+    margin-top: 0px;
+    padding-bottom: 15px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+#cooking-image {
+    display: block;
+    width: 1280px;
+    height: auto;
+}
+
+
+/*Nav*/
+nav h2 { /*Keeps navigation h2 in the outline but off the webpage*/
+    visibility: hidden;
+    font-size: 0;
+}
+
+nav ul {
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    padding: 40px;
+    width: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--nav-text);
+}
+
+nav a:hover {
+    color: var(--nav-hover);
+    border-top: 1px solid var(--nav-border);
+    border-bottom: 1px solid var(--nav-border);
+}
+
+nav a:visited {
+    color: var(--visited);
+}
+
+nav a:active {
+    color: var(--accent);
+}
+
+[href="#top"] { /*Helps user jump back to top of webpage*/
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+[href="#top"]:hover {
+    border: none;
+    color: var(--text-color);
+}
+
+
+/*Dark Mode*/
+.darkmode { /*Dark Mode Colors*/
+    --heading1: white;
+    --heading2: #F0A500;
+    --heading3: #E45826;
+    --nav-text: #F0A500;
+    --body-background: #19202b;
+    --main-background: #2D4263;
+    --background-variant: #2D4263;
+    --text-color: white; 
+    --secondary-text: white;
+    --visited: #808080;
+    --primary-color: #F0A500;
+    --accent-color: #E45826;
+    --form-background: #19202b;
+    --form-text: white;
+    --form-submit: #2D4263;
+    --form-hover: #808080;
+    --nav-hover:  white;
+    --nav-border: white;
+    --cater-background: #06142b;
+    --product-buttons: #2D4263;
+    --product-background: #06142b;
+    --footer: #06142b;
+}
+
+#mode-switch { /*Mode Icons*/
+    cursor: pointer;
+    background-color: var(--accent-color);
+    border: none;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+}
+
+#mode-switch svg:first-child { /*Hides sun icon during LM*/
+    display: none;
+}
+
+.darkmode #mode-switch svg:last-child { /*Hides moon icon during DM*/
+    display: none;
+}
+
+.darkmode #mode-switch svg:first-child { /*Sets sun icon location in relation to moon icon*/
+    display: block;
+}
+
+
+/*Body*/
+body {
+    width: 1280px; /*Project requirement*/
+	margin: auto;
+    background-color: var(--body-background);
+}
+
+
+/*Headings*/
+h2{
+	font-size: 30px;
+	text-align: center;
+    margin: auto;
+    color: var(--heading2);
+}
+
+h3{
+    margin-top: 15px;
+	font-size: 22px;
+	text-align: center;
+    color: var(--heading3);
+}
+
+h4{
+	font-size: 15px;
+	text-align: center;
+    color: var(--secondary-text);
+}
+
+
+/*Main*/
+main, header, nav {
+    background-color: var(--main-background);
+    margin: 0;
+}
+
+main p {
+    text-align: center;
+    font-size: 14px;
+    display: block;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+main a:visited {
+    color: var(--visited);
+}
+
+
+/*About Section*/
+#about {
+    background-image: url("images/cranes.jpg");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: var(--background-variant);
+    padding: 75px;
+}
+
+#about p {
+    color: var(--text-color);
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/*Cater Section*/
+#cater {
+    background-color: var(--cater-background);
+    padding: 50px;
+}
+
+#cater-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    margin: auto;
+}
+
+#local-cuisine, #chef-hands {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 30px;
+}
+
+ #cater p {
+    color: var(--secondary-text) ;
+}
+
+
+/*Menu Section*/
+#menu {
+    background-color: var(--background-variant);
+    padding: 50px;
+}
+
+#menu-grid {
+    display: grid;
+    grid-template-columns: 1FR 1FR 1FR 1FR;
+    grid-template-rows: 1FR;
+}
+
+.food-item {
+    width: fit-content;
+    padding: 10px;
+}
+
+.food-item img {
+    max-width: 100%;
+    margin-top: 25px;
+}
+
+.food-item h3 {
+    margin-top: 10px;
+}
+
+.food-item p {
+    color: var(--text-color);
+}
+
+
+/*Product Section*/
+#products {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--product-background);
+}
+
+#product-grid .currentItem { /*Shows currentItem on page load*/
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#product-grid img {
+    width: 30%;
+}
+
+.hiddenItem { /*Hides other products until buttons are clicked*/
+    display: none;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#product h3 {
+    margin-top: 10px;
+}
+
+#product-grid p {
+    color: var(--secondary-text);
+}
+
+#switcherButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#product-grid button {
+    margin-top: 15px;
+    width: max-content;
+    padding: 10px;
+    background-color: var(--product-buttons);
+	border-radius: 4px;
+    border: none;
+	color: var(--text-color);
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#product-grid button:hover {
+	background-color: var(--form-hover);
+    border: none;
+}
+
+
+/*Contact Section*/
+#contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),url("images/catering.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+ }
+
+ #contact-us {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+ }
+
+#contact-us h2 {
+    margin-top: 16px;
+    color: var(--text-color);
+}
+
+ #contact-us p {
+    color: var(--text-color);
+    text-align: left;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+
+/*Contact Form*/
+form {
+	width: 640px;
+    height: auto;
+	margin: auto;
+	margin-top: 16px;
+	margin-bottom: 24px;
+	padding: 16px;
+	background-color: var(--form-background);
+	color: var(--form-text);
+	border-radius: 4px;
+    box-shadow: -6px 6px 10px black;
+}
+
+#form {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+input, label, textarea {
+	display: block;
+	width: 100%;
+}
+
+input, textarea {
+	padding: 10px;
+	font-size: 16px;
+	margin-bottom: 24px;
+	border-radius: 1px;
+    background-color: var(--main-background);
+}
+
+label {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 4px;
+	margin-left: 16px;
+	font-weight: bold;
+}
+
+fieldset {
+	margin-bottom: 24px;
+	border-radius: 4px;
+	border: 1px solid var(--primary-color);
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 8px;
+}
+
+legend {
+	font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+fieldset label {
+	margin-left: 0;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=number], #comments { /*Allows me to adjust form input text color during DM*/
+    color: var(--form-text);
+}
+
+input[type=submit] {
+	background-color: var(--form-submit);
+	border-radius: 4px;
+    border: none;
+	color: var(--text-color);
+	font-size: 18px;
+	font-weight: bold;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+	border: solid 4px var(--primary-color);
+}
+
+input:focus, select:focus, textarea:focus {
+	outline: solid 3px var(--background-variant);
+}
+
+input[type=submit]:focus {
+	outline: solid 3px var(--primary-color);
+}
+
+input[type=submit]:hover {
+	background-color: var(--form-hover);
+    border: none;
+}
+
+.form-control {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 1em;
+    margin: 10px;
+    align-items: center;
+}
+
+input[type="radio"] { 
+    cursor: pointer;
+    appearance: none;
+    background-color: var(--main-background);
+    margin: 0;
+    color: var(--secondary-text);
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--secondary-text);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+  
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: var(--accent-color);
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+  
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid var(--secondary-text);
+    outline-offset: max(2px, 0.15em);
+}
+
+#form h2 { /*Keeps form h2 in the outline but off the webpage*/
+    visibility: hidden;
+    font-size: 0;
+}
+
+.message {
+    display: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+  
+.error{
+    margin-left: 16px;
+    display: block;
+}
+  
+.errorInput{
+    border: 3px solid var(--accent-color);
+}
+
+.required {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#phoneReq, #emailReq {
+    display: none;
+    color: var(--accent-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#success{
+	box-shadow: none;
+	border: none;
+}
+
+#success.hide{
+  display: none;
+}
+
+#success p {
+    color: white;
+}
+
+#output {
+    padding: 0;
+}
+
+
+/*Guessing Game*/
+#guessingGame {
+	margin-top: 2rem;	
+	padding-bottom: 2rem;
+}
+
+#guessingGame h3 {
+    display: none;
+}
+
+#guessingGame div{
+	display: block;
+	max-width: 800px;
+	margin: 0 auto;
+}
+#guessingGame form{
+	padding: 1rem;
+    max-width: 400px;
+    background-color: var(--form-background);
+}
+
+#gameText {
+    padding: 20px;
+    color: var(--secondary-text);
+}
+
+#gameText p {
+    width: 50%;
+    margin: auto;
+}
+
+#output {
+    padding: 10px;
+}
+
+
+/*Footer*/
+footer {
+    text-align: center;
+    background-color: var(--footer);
+    color: var(--text-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
